@@ -21,7 +21,7 @@ function Why() {
                       Professional electrical work for construction sites
                     </h1>
                     <h2 className="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Beejliwala is a professional electrical company that
+                      The Beejliwala is a professional electrical company that
                       provides high-quality electrical services to commercial
                       and industrial clients. Our team of experienced
                       professionals can handle any electrical project, from
@@ -39,7 +39,7 @@ function Why() {
             <div className="flex flex-col gap-10 px-4 py-10 @container">
               <div className="flex flex-col gap-4">
                 <h1 className="text-[#111418] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-                  Why choose Beejliwala?
+                  Why choose The Beejliwala?
                 </h1>
                 <p className="text-[#111418] text-base font-normal leading-normal max-w-[720px]">
                   We are committed to delivering exceptional service and results
@@ -100,11 +100,11 @@ function Why() {
                       Quality assurance
                     </p>
                     <p className="text-[#60758a] text-sm font-normal leading-normal">
-                      Beejliwala provides comprehensive electrical inspection
-                      services to verify the performance and safety of your
-                      electrical systems. Our inspectors are trained to identify
-                      potential issues and provide recommendations for improving
-                      system reliability and efficiency.
+                      The Beejliwala provides comprehensive electrical
+                      inspection services to verify the performance and safety
+                      of your electrical systems. Our inspectors are trained to
+                      identify potential issues and provide recommendations for
+                      improving system reliability and efficiency.
                     </p>
                   </div>
                 </div>

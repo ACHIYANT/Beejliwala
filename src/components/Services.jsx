@@ -18,7 +18,7 @@ function Services() {
                 >
                   <div className="flex flex-col gap-2 text-left">
                     <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
-                      Electrical Services construction sites
+                      Electrical Services for construction sites
                     </h1>
                     <h2 className="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
                       Beejliwala is your partner in getting the job done. We

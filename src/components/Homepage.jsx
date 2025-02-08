@@ -47,9 +47,9 @@ function Homepage() {
                   Our Services
                 </h1>
                 <p className="text-[#111418] text-base font-normal leading-normal max-w-[720px]">
-                  Electro Pro provides a wide range of professional electrical
-                  services for commercial and residential clients. From new
-                  construction to remodels, upgrades, and repairs, our
+                  The Beejliwala provides a wide range of professional
+                  electrical services for commercial and residential clients.
+                  From new construction to remodels, upgrades, and repairs, our
                   experienced team is committed to delivering superior results,
                   on time and on budget.
                 </p>
