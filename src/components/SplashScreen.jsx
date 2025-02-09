@@ -3,18 +3,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./SplashScreen.css";
 
 const SplashScreen = ({ children }) => {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(() => {
+    return sessionStorage.getItem("splashShown") !== "true"; // Show only if not seen in this session
+  });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 700); // Duration of the splash screen (3 seconds)
+    if (showSplash) {
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+        sessionStorage.setItem("splashShown", "true"); // Mark splash as shown for this session
+      }, 700);
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [showSplash]);
 
   return (
-    <div className="app-container ">
+    <div className="app-container">
       <AnimatePresence>
         {showSplash && (
           <motion.div
@@ -38,6 +43,94 @@ const SplashScreen = ({ children }) => {
 };
 
 export default SplashScreen;
+
+// import React, { useEffect, useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import "./SplashScreen.css";
+
+// //Local Storage
+// const SplashScreen = ({ children }) => {
+//   const [showSplash, setShowSplash] = useState(() => {
+//     return localStorage.getItem("splashShown") !== "true"; // Show only if not seen before
+//   });
+
+//   useEffect(() => {
+//     if (showSplash) {
+//       const timer = setTimeout(() => {
+//         setShowSplash(false);
+//         localStorage.setItem("splashShown", "true"); // Mark as shown
+//       }, 700);
+
+//       return () => clearTimeout(timer);
+//     }
+//   }, [showSplash]);
+
+//   return (
+//     <div className="app-container">
+//       <AnimatePresence>
+//         {showSplash && (
+//           <motion.div
+//             className="splash-screen"
+//             initial={{ scale: 1.4, opacity: 0.5 }}
+//             animate={{ scale: 1.2, opacity: 1 }}
+//             exit={{ scale: 1, opacity: 0 }}
+//             transition={{ duration: 1 }}
+//           >
+//             <img
+//               src="/beejliwala-logo.jpg"
+//               alt="Logo"
+//               className="splash-logo"
+//             />
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//       {!showSplash && <div className="main-content">{children}</div>}
+//     </div>
+//   );
+// };
+
+// export default SplashScreen;
+
+// import React, { useEffect, useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import "./SplashScreen.css";
+
+// const SplashScreen = ({ children }) => {
+//   const [showSplash, setShowSplash] = useState(true);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setShowSplash(false);
+//     }, 700); // Duration of the splash screen (3 seconds)
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   return (
+//     <div className="app-container splash-screen-1">
+//       <AnimatePresence>
+//         {showSplash && (
+//           <motion.div
+//             className="splash-screen splash-screen-1"
+//             initial={{ scale: 1.4, opacity: 0.5 }}
+//             animate={{ scale: 1.2, opacity: 1 }}
+//             exit={{ scale: 1, opacity: 0 }}
+//             transition={{ duration: 1 }}
+//           >
+//             <img
+//               src="/beejliwala-logo.jpg"
+//               alt="Logo"
+//               className="splash-logo"
+//             />
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//       {!showSplash && <div className="main-content">{children}</div>}
+//     </div>
+//   );
+// };
+
+// export default SplashScreen;
 
 // import React, { useEffect, useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
