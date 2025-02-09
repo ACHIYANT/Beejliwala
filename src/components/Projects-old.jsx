@@ -1,27 +1,22 @@
 import React from "react";
 import Header from "./Header";
-
 const HeroSection = () => {
   return (
-    <div className="@container">
-      <div className="p-4">
-        <div
-          className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-start justify-end px-4 pb-10 rounded-xl"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url('https://cdn.usegalileo.ai/stability/907bf500-1656-430c-87dc-080ab08069a4.png')",
-          }}
-        >
-          <div className="flex flex-col gap-2 text-left">
-            <h1 className="text-white text-3xl sm:text-4xl font-black leading-tight tracking-[-0.033em]">
-              Completed Projects
-            </h1>
-            <h2 className="text-white text-sm font-normal leading-normal">
-              Some of our most recent and exciting projects. We are proud to
-              showcase our work and demonstrate our commitment to excellence.
-            </h2>
-          </div>
-        </div>
+    <div
+      className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-start justify-end px-4 pb-10 rounded-xl"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url('https://cdn.usegalileo.ai/stability/907bf500-1656-430c-87dc-080ab08069a4.png')",
+      }}
+    >
+      <div className="flex flex-col gap-2 text-left">
+        <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em]">
+          Completed Projects
+        </h1>
+        <h2 className="text-white text-sm font-normal leading-normal">
+          Some of our most recent and exciting projects. We are proud to
+          showcase our work and demonstrate our commitment to excellence.
+        </h2>
       </div>
     </div>
   );
@@ -29,11 +24,11 @@ const HeroSection = () => {
 
 const ImageGrid = ({ title, images }) => {
   return (
-    <div className="px-4 py-6">
+    <div className="p-4">
       <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] pb-2">
         {title}
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
         {images.map((image, index) => (
           <div key={index} className="flex flex-col gap-3">
             <div
@@ -47,7 +42,7 @@ const ImageGrid = ({ title, images }) => {
   );
 };
 
-const Projects = () => {
+const Test = () => {
   const residentialImages = [
     "https://cdn.usegalileo.ai/stability/de446294-7e29-433e-8882-fb24aae7c3d3.png",
     "https://cdn.usegalileo.ai/stability/a88e5a37-32b7-4fe7-9c1e-6527f2ae6e82.png",
@@ -72,8 +67,8 @@ const Projects = () => {
       style={{ fontFamily: 'Manrope, "Noto Sans", sans-serif' }}
     >
       <Header />
-      <div className="layout-container flex h-full grow flex-col px-4 md:px-40">
-        <div className="flex flex-1 justify-center py-5">
+      <div className="layout-container flex h-full grow flex-col">
+        <div className="px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
             <HeroSection />
             <ImageGrid title="Residential" images={residentialImages} />
@@ -86,4 +81,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Test;

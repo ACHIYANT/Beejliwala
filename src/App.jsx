@@ -15,7 +15,6 @@ function App() {
       className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
       style={{ fontFamily: 'Manrope, "Noto Sans", sans-serif' }}
     >
-     
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
