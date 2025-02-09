@@ -1,5 +1,5 @@
 import React from "react";
-
+import Header from "./Header";
 const HeroSection = () => {
   return (
     <div
@@ -66,6 +66,7 @@ const Projects = () => {
       className="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden"
       style={{ fontFamily: 'Manrope, "Noto Sans", sans-serif' }}
     >
+      <Header />
       <div className="layout-container flex h-full grow flex-col">
         <div className="px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">

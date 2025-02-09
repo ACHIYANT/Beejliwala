@@ -14,7 +14,7 @@ const SplashScreen = ({ children }) => {
   }, []);
 
   return (
-    <div className="splash-screen-1 app-container ">
+    <div className="app-container ">
       <AnimatePresence>
         {showSplash && (
           <motion.div
